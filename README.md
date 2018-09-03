@@ -27,7 +27,7 @@ $>docker ps -all
 <br>To start the container</br> 
 $>docker start <container id>
 <br>To attach to a container</br>
-$>docker attach <container name>
+$>docker attach <container id>
   
 <br>=======RUNNING THE HELLO WORLD CONTAINER========</br>
 <br>When you run the command "Docker run hello-world"  </br>
@@ -76,6 +76,28 @@ For more examples and ideas, visit:
 <br>bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr</br>
 
+$ docker stop <container name>
+  1. The docker client takes the input and sends it to the docker daemon
+  2. The docker daemon then traces the container and passes on the command
+  3. The container listens to the command and passes it to the process in the conatiner and says it to exit. 
+  
+  More Commands:
+  1.docker run -it -d --rm --name ubuntu1 ubuntu bash
+    -it -> interactive
+    -d -> detach ( when container starts it's not automatically attached to the terminal)
+    --rm -> when container stops , remove it automatically
+    --name -> give a name to the conatiner . In this case "ubuntu1"
+    [ubuntu] -> is the image name 
+    [bash] -> is the argument
+ <br>Check Logs </br>
+ $> docker logs <container name>
+ 
+ <b> BUILDING IMAGES </b>
+    
+  
+  
+  
+  
 
 
 
